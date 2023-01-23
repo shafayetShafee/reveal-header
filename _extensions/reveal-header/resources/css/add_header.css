@@ -1,0 +1,22 @@
+
+.reveal .reveal-header p {
+  width: 100%;
+  position: fixed;
+  font-size: 18px;
+  text-align: center;
+  color: #898E8B;
+}
+
+.reveal .header-logo {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 12px;
+  max-height: 2.2rem;
+  height: 100%;
+  width: auto;
+}
+
+.reveal .slides {
+  margin-top: 0.5em !important;
+}

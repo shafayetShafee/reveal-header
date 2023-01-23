@@ -1,0 +1,33 @@
+---
+title: "Quarto Presentations"
+subtitle: "Create beautiful interactive slide decks with Reveal.js"
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard:
+      buttons: false
+    preview-links: auto
+    logo: images/quarto.png
+    # # css: styles.css
+    footer: <https://quarto.org>
+    header: Quarto Presentations with beautiful slide decks made by RevealJs
+    header-logo: images/quarto.png
+filters:
+  - reveal-header
+execute: 
+  eval: false
+  echo: true
+---
+
+## Hello, There
+
+There is more
+
+```{r}
+# some comment
+```
+
+
+## Hello, There
+
+There is more
