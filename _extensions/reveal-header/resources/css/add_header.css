@@ -4,6 +4,7 @@
   margin: 2px 0px;
   width: 100%;
   position: fixed;
+  z-index: 5;
 }
 
 .reveal .reveal-header p {
@@ -27,4 +28,8 @@
 
 .reveal .slides {
   margin-top: 3vh !important;
+}
+
+.inverse-header {
+  color: #c1c1c1 !important;
 }

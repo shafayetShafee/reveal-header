@@ -12,11 +12,10 @@ end
 ensureHtmlDeps()
 
 function Pandoc(doc)
-  -- quarto.log.output(doc.blocks)
   local blocks = doc.blocks
-  local header_text = doc.meta['header']
-  local header_logo = pandoc.utils.stringify(doc.meta['header-logo'])
-  --local img_attr = pandoc.Attr('', {'header-logo'})
+  local str = pandoc.utils.stringify
+  local header_text = str(doc.meta['header'])
+  local header_logo = str(doc.meta['header-logo'])
   local header_img = pandoc.Image("", header_logo, "", 
     {class = "header-logo"})
   local header_para = pandoc.Div(pandoc.Para(header_text), {class = "header-text"})
