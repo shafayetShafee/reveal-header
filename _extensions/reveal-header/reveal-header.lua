@@ -17,8 +17,9 @@ function Pandoc(doc)
   local header_text = doc.meta['header']
   local header_logo = pandoc.utils.stringify(doc.meta['header-logo'])
   --local img_attr = pandoc.Attr('', {'header-logo'})
-  local header_img = pandoc.Image("", header_logo, "", {class = "header-logo"})
-  local header_para = pandoc.Para(header_text)
+  local header_img = pandoc.Image("", header_logo, "", 
+    {class = "header-logo"})
+  local header_para = pandoc.Div(pandoc.Para(header_text), {class = "header-text"})
   local div = pandoc.Div({header_img, header_para}, {class = 'reveal-header'})
   table.insert(blocks, div)
   return doc
