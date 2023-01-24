@@ -20,33 +20,7 @@ execute:
 
 ## Hello, There
 
-This presentation will show you some examples of what you can do with Quarto and [Reveal.js](https://revealjs.com) along with header logo and header text, including:
-
--   Presenting code and LaTeX equations
--   Including computations in slide output
--   Image, video, and iframe backgrounds
--   Fancy transitions and animations
--   Printing to PDF
-
-...and much more
-
-
-## Executable Code
-
-```{r}
-#| echo: true
-#| fig-width: 10
-#| fig-height: 4.5
-
-library(ggplot2)
-ggplot(mtcars, aes(hp, mpg, color = am)) +
-  geom_point() +
-  geom_smooth(formula = y ~ x, method = "loess")
-```
-
-::: footer
-Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
-:::
+This presentation shows a few slides made by Quarto and [Reveal.js](https://revealjs.com) along with header logo and header text which are easily embedded by using the Quarto filter `reveal-header`
 
 
 ## Slide Backgrounds {background="#43464B"}
@@ -65,4 +39,22 @@ Here using `!important` is important :p.
 
 ::: footer
 Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)
+:::
+
+
+## Executable Code
+
+```{r}
+#| echo: true
+#| fig-width: 10
+#| fig-height: 4.5
+
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+::: footer
+Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
 :::
