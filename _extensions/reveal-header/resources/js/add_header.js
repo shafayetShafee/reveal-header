@@ -14,24 +14,33 @@ window.onload = add_header();
 
 // Reveal API
 
+// Get the default header text element and innner HTML (i.e. literal text)
+let header_text = document.querySelector("div.header-text p");
+const header_inner_html = header_text.innerHTML;
+
 // add the class inverse-header for slide with has-dark-background class
 // otherwise remove it.
-Reveal.on( 'slidechanged', event => {
-  let has_dark = event.currentSlide.classList.contains('has-dark-background');
+function add_class(has_dark, header_text) {
   header_text.classList.remove('inverse-header');
   if(has_dark) {
     header_text.classList.add('inverse-header');
   }
+}
+
+if (Reveal.isReady()) {
+  let dark = Reveal.getCurrentSlide().classList.contains('has-dark-background');
+  add_class(dark, header_text);
+}
+
+Reveal.on( 'slidechanged', event => {
+  let has_dark = event.currentSlide.classList.contains('has-dark-background');
+  add_class(has_dark, header_text);
 });
 
 // make the visibility of header text defined in slide body none
 document.querySelectorAll('div.header').forEach(el => {
   el.style.display = 'none';
 });
-
-// Get the default header text element and innner HTML (i.e. literal text)
-let header_text = document.querySelector("div.header-text p");
-const header_inner_html = header_text.innerHTML;
 
 // dynamically changing the header
 function change_header(dheader, cheader, ctext) {

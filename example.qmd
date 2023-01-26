@@ -4,13 +4,11 @@ subtitle: "Create beautiful interactive slide decks with Reveal.js"
 author: Shafayet Khan Shafee
 date: last-modified
 format:
-  # native: default
   revealjs:
     slide-number: true
     logo: images/quarto.png
     footer: <https://quarto.org>
-    header: |
-      Quarto Presentations with beautiful slide decks made by RevealJs
+    header: Quarto Presentations with beautiful slide decks made by RevealJs
     header-logo: images/reveal_logo.svg
 filters:
   - reveal-header
@@ -20,6 +18,9 @@ execute:
 ---
 
 ## Hello, There
+
+header: Quarto Presentations with beautiful slide decks made by RevealJs
+header-logo: images/reveal_logo.svg
 
 This presentation shows a few slides made by Quarto and [Reveal.js](https://revealjs.com) along with header logo and header text which are easily embedded by using the Quarto filter `reveal-header`
 
@@ -37,6 +38,20 @@ if you want you can change the color of the header text for slides with `backgro
 ~~~
 
 Here using `!important` is important :p.
+
+::: footer
+Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)
+:::
+
+## Slide Backgrounds {background="#43464B"}
+
+::: header
+
+Slide with bg color #43464B.
+
+:::
+
+This slide contains a header div, therefore it has a header.
 
 ::: footer
 Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#color-backgrounds)

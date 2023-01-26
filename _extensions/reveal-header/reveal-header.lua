@@ -17,7 +17,7 @@ function Pandoc(doc)
   local blocks = doc.blocks
   local str = pandoc.utils.stringify
   local meta = doc.meta
-  local header_text = meta['header'] and str(meta['header']) or ""
+  local header_text = meta['header'] and str(meta['header']) or " "
   local header_logo = meta['header-logo'] and str(meta['header-logo']) or ""
   local header_img = pandoc.Image("", header_logo, "", {class = "header-logo"})
   local header_para = pandoc.Div(pandoc.Para(header_text), {class = "header-text"})

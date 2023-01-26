@@ -26,10 +26,6 @@
   margin: 8px 0px 0px 0px;
 }
 
-.reveal .slides {
-  margin-top: 3vh !important;
-}
+.reveal .slides { margin-top: 3vh !important;}
 
-.inverse-header {
-  color: #c1c1c1 !important;
-}
+.inverse-header { color: #74ffba !important;}
