@@ -19,9 +19,6 @@ execute:
 
 ## Hello, There
 
-header: Quarto Presentations with beautiful slide decks made by RevealJs
-header-logo: images/reveal_logo.svg
-
 This presentation shows a few slides made by Quarto and [Reveal.js](https://revealjs.com) along with header logo and header text which are easily embedded by using the Quarto filter `reveal-header`
 
 
@@ -47,7 +44,7 @@ Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#
 
 ::: header
 
-Slide with bg color #43464B.
+Slide with bg color #43464B, used in **.inverse-color**
 
 :::
 
