@@ -4,6 +4,8 @@ A very simple Quarto filter extension for [`revealjs`](https://quarto.org/docs/p
 
 So by using this filter, it is possible to use two logos for each slides (One by using the default [`logo`](https://quarto.org/docs/presentations/revealjs/#footer-logo) option which adds the logo on bottom-right corner and another one by using `header-logo` option provided by this filter.)
 
+View the [live demo](https://shafayetshafee.github.io/reveal-header/example.html) of using ths filter.
+
 ## Installing
 
 ```bash
@@ -70,5 +72,5 @@ Also, to change the header text style for slides with simple [`background`](http
 
 ## Example
 
-Here is the source code for a minimal example: [example.qmd](example.qmd).
+Here is the source code for a minimal example: [example.qmd](example.qmd) and the live demo of the rendered revealjs slides, [example.html](https://shafayetshafee.github.io/reveal-header/example.html)
 
