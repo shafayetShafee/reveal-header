@@ -1,0 +1,31 @@
+
+.reveal .reveal-header {
+  top: 0;
+  margin: 2px 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+}
+
+.reveal .reveal-header p {
+  color: #898E8B;
+  text-align: center;
+  margin: 8px 0px 0px 0px;
+  font-size: max(10px, 1.3vw);
+}
+
+.reveal .header-logo {
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  left: 12px;
+  height: auto;
+  width: auto;
+  max-width: max(50px, 10vw);
+  max-height: max(50px, 10vh);
+  margin: 8px 0px 0px 0px;
+}
+
+.reveal .slides { margin-top: 3vh !important;}
+
+.inverse-header { color: #74ffba !important;}
