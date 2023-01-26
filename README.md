@@ -42,6 +42,8 @@ Then the text `Quarto Presentations with beautiful slide decks made by RevealJs`
 
 So the Title slide for the above example looks like,
 
+<hr>
+
 ![Title Slide](images/revealjs_minimal_example_ss.png)
 
 You can also include a custom header per-slide by adding a `header` div at the bottom of the the slide, as following,
