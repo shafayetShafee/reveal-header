@@ -11,7 +11,7 @@ View the [live demo](https://shafayetshafee.github.io/reveal-header/example.html
 ## Installing
 
 ```bash
-quarto add shafayetShafe/reveal-header
+quarto add shafayetShafee/reveal-header
 ```
 
 This will install the extension under the `_extensions` subdirectory.
