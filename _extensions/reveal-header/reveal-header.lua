@@ -9,15 +9,17 @@ local function ensureHtmlDeps()
 })
 end
 
+-- Ensuring the dependencies got loaded before proceeding
 ensureHtmlDeps()
 
+-- make divs structure for holding text and logo.
 function Pandoc(doc)
   local blocks = doc.blocks
   local str = pandoc.utils.stringify
-  local header_text = str(doc.meta['header'])
-  local header_logo = str(doc.meta['header-logo'])
-  local header_img = pandoc.Image("", header_logo, "", 
-    {class = "header-logo"})
+  local meta = doc.meta
+  local header_text = meta['header'] and str(meta['header']) or ""
+  local header_logo = meta['header-logo'] and str(meta['header-logo']) or ""
+  local header_img = pandoc.Image("", header_logo, "", {class = "header-logo"})
   local header_para = pandoc.Div(pandoc.Para(header_text), {class = "header-text"})
   local div = pandoc.Div({header_img, header_para}, {class = 'reveal-header'})
   table.insert(blocks, div)

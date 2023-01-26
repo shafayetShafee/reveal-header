@@ -4,7 +4,8 @@ subtitle: "Create beautiful interactive slide decks with Reveal.js"
 author: Shafayet Khan Shafee
 date: last-modified
 format:
-  revealjs: 
+  # native: default
+  revealjs:
     slide-number: true
     logo: images/quarto.png
     footer: <https://quarto.org>
@@ -25,7 +26,7 @@ This presentation shows a few slides made by Quarto and [Reveal.js](https://reve
 
 ## Slide Backgrounds {background="#43464B"}
 
-This slide is created using the `background` attribute (`background="#43464B"}`) and as you can see that header text color is different (difference is trivial though) than before.
+This slide is created using the `background` attribute (`{background="#43464B"}`) and as you can see that header text color is different (difference is trivial though) than before.
 
 if you want you can change the color of the header text for slides with `background` attribute using css class `.inverse-header`. For example,
 
@@ -44,6 +45,12 @@ Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#
 
 ## Executable Code
 
+::: header
+
+Codes with syntax highlighting and line numbers.
+
+:::
+
 ```{r}
 #| echo: true
 #| fig-width: 10
@@ -57,4 +64,30 @@ ggplot(mtcars, aes(hp, mpg, color = am)) +
 
 ::: footer
 Learn more: [Executable Code](https://quarto.org/docs/presentations/revealjs/#executable-code)
+:::
+
+
+## Line Highlighting
+
+::: header
+
+Codes with specific line highlighted
+
+:::
+
+``` {.python code-line-numbers="4-5|7|10"}
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+::: footer
+Learn more: [Line Highlighting](https://quarto.org/docs/presentations/revealjs/#line-highlighting)
 :::
