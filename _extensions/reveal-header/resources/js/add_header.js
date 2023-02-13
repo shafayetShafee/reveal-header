@@ -70,10 +70,10 @@ Reveal.on( 'slidechanged', event => {
   if (sp != null) {
     let header = document.querySelector("div.reveal-header");
     let section_text = sp?.querySelector('.title-slide h1')?.innerText;
-    var sbsection_text = sp?.querySelector('.title-slide h2')?.innerText;
-    let pres_sbsection_text = sp?.querySelector('.present.title-slide h2')?.innerText;
-    sbsection_text = pres_sbsection_text || sbsection_text;
-    
+    //var sbsection_text = sp?.querySelector('.title-slide h2')?.innerText;
+    if (event.currentSlide.matches('.title-slide.level2')) {
+      sbsection_text = event.currentSlide.querySelector('.title-slide h2').innerText;
+    }
     if (event.currentSlide.matches('.title-slide.level1')) {
         header.querySelector('.sc-title').innerText = ""; 
         header.querySelector('.sb-title').innerText = "";
