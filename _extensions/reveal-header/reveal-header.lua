@@ -36,6 +36,9 @@ if quarto.doc.is_format('revealjs') then
     if meta['title-as-header'] then
       header_text = meta['title']
     end
+    if meta['subtitle-as-header'] then
+      header_text = meta['subtitle']
+    end
     local header_logo = meta['header-logo'] and str(meta['header-logo']) or ""
     local header_img = pandoc.Div(pandoc.Image("", header_logo, ""), {class = "header-logo"})
     local header_section = pandoc.Div(pandoc.Para(" "), {class = "sc-title"})

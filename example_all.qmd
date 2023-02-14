@@ -10,7 +10,7 @@ format:
     sc-sb-title: true
     header: Quarto Presentations with beautiful slide decks made by RevealJs
     header-logo: images/reveal_logo.svg
-    title-as-header: true
+    subtitle-as-header: true
     footer: <https://quarto.org>
 filters: 
   - reveal-header
@@ -37,6 +37,12 @@ standalone: true
 - Eat eggs
 - Drink coffee
 
+::: header
+
+Slide specific header.
+
+:::
+
 
 # Section {background="#43464B"}
 
@@ -48,6 +54,7 @@ standalone: true
 - Get out of bed
 
 
+
 ## Subsection {background="#43464B"}
 
 ### TODO {background="#43464B"}
@@ -55,3 +62,9 @@ standalone: true
 - Eat eggs
 - Drink coffee
 
+
+::: header
+
+Slide specific header.
+
+:::

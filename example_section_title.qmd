@@ -6,9 +6,7 @@ date: last-modified
 format: 
   revealjs:
     slide-number: true
-    logo: images/quarto.png
     sc-sb-title: true
-    footer: <https://quarto.org>
 filters: 
   - reveal-header
 slide-level: 3

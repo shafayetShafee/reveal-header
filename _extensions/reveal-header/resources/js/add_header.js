@@ -3,16 +3,16 @@ function add_header() {
   let reveal = document.querySelector(".reveal");
   reveal.insertBefore(header, reveal.firstChild);
   
-  logo_img = document.querySelector('img.header-logo');
-  if (logo_img?.getAttribute('src') == null) {
-    if (!logo_img?.getAttribute('data-src') == null) {
+  logo_img = document.querySelector('.header-logo img');
+  if (logo_img.getAttribute('src') == null) {
+    if (logo_img?.getAttribute('data-src') != null) {
       logo_img.src = logo_img?.getAttribute('data-src') || "";
       logo_img.removeAttribute('data-src'); 
     }
   }
 }
 
-add_header();
+window.onload = add_header();
 
 // Reveal API
 
