@@ -9,17 +9,33 @@ local function ensureHtmlDeps()
 })
 end
 
+local function sc_sb_title()
+  quarto.doc.add_html_dependency({
+  name = "sc-sb-title",
+  version = "1.0.0",
+  scripts = {
+    { path = "resources/js/sc_sb_title.js", attribs = {defer = "true"}}
+  },
+  stylesheets = {"resources/css/sc_sb_title.css"}
+})
+end
+
 
 if quarto.doc.is_format('revealjs') then
   -- Ensuring the dependencies got loaded before proceeding
   ensureHtmlDeps()
-  
   -- make divs structure for holding text and logo.
   function Pandoc(doc)
     local blocks = doc.blocks
     local str = pandoc.utils.stringify
     local meta = doc.meta
+    if meta['sc-sb-title'] then
+      sc_sb_title()
+    end
     local header_text = meta['header'] and str(meta['header']) or " "
+    if meta['title-as-header'] then
+      header_text = meta['title']
+    end
     local header_logo = meta['header-logo'] and str(meta['header-logo']) or ""
     local header_img = pandoc.Div(pandoc.Image("", header_logo, ""), {class = "header-logo"})
     local header_section = pandoc.Div(pandoc.Para(" "), {class = "sc-title"})

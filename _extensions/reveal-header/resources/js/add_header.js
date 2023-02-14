@@ -3,10 +3,12 @@ function add_header() {
   let reveal = document.querySelector(".reveal");
   reveal.insertBefore(header, reveal.firstChild);
   
-  logo_img = document.querySelector('div.header-logo img');
-  if (logo_img.getAttribute('src') === null) {
-    logo_img.src = logo_img.getAttribute('data-src');
-    logo_img.removeAttribute('data-src');
+  logo_img = document.querySelector('img.header-logo');
+  if (logo_img?.getAttribute('src') == null) {
+    if (!logo_img?.getAttribute('data-src') == null) {
+      logo_img.src = logo_img?.getAttribute('data-src') || "";
+      logo_img.removeAttribute('data-src'); 
+    }
   }
 }
 
@@ -47,7 +49,7 @@ function change_header(dheader, cheader, ctext) {
   // dhead => dynamic header
   // chead => constant header
   // ctext => contstant header_text inner html
-  if (dheader != null) {
+  if (dheader !== null) {
     cheader.innerHTML = dheader.innerHTML;  
   } else {
     cheader.innerHTML = ctext;
@@ -64,28 +66,4 @@ if (Reveal.isReady()) {
 Reveal.on( 'slidechanged', event => {
   let dyn_header = event.currentSlide.querySelector('div.header p');
   change_header(dyn_header, header_text, header_inner_html);
-  
-  let sp = Reveal.getSlidesElement().querySelector('.stack.present');
-  
-  if (sp != null) {
-    let header = document.querySelector("div.reveal-header");
-    let section_text = sp?.querySelector('.title-slide h1')?.innerText;
-    //var sbsection_text = sp?.querySelector('.title-slide h2')?.innerText;
-    if (event.currentSlide.matches('.title-slide.level2')) {
-      sbsection_text = event.currentSlide.querySelector('.title-slide h2').innerText;
-    }
-    if (event.currentSlide.matches('.title-slide.level1')) {
-        header.querySelector('.sc-title').innerText = ""; 
-        header.querySelector('.sb-title').innerText = "";
-      } else if (event.currentSlide.matches('.title-slide.level2')) {
-        header.querySelector('.sc-title').innerText = section_text  || " ";  
-        header.querySelector('.sb-title').innerText = "";
-      } else {
-        header.querySelector('.sc-title').innerText = section_text  || " ";
-        header.querySelector('.sb-title').innerText = sbsection_text || " ";
-      }
-     
-    } 
 });
-
-

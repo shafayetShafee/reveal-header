@@ -5,6 +5,10 @@ format:
   revealjs:
     slide-number: true
     logo: images/quarto.png
+    sc-sb-title: true
+    # header: Quarto Presentations with beautiful slide decks made by RevealJs
+    header-logo: images/reveal_logo.svg
+    # title-as-header: true
 filters: 
   - reveal-header
 number-sections: true

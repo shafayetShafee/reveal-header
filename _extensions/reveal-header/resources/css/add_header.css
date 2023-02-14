@@ -1,17 +1,23 @@
+:root {
+  --header-font-size: max(10px, 1.4vw);
+  --header-font-color: #898E8B;
+  --header-margin: 0px 0px 0px 0px;
+}
+
 
 .reveal .reveal-header {
   top: 0;
-  margin: 2px 0px;
+  margin: 5px 0px 2px 0px;
   width: 100%;
   position: fixed;
   z-index: 5;
 }
 
 .reveal .reveal-header p {
-  color: #898E8B;
+  color: var(--header-font-color);
   text-align: center;
-  margin: 8px 0px 0px 0px;
-  font-size: max(10px, 1.3vw);
+  margin: var(--header-margin);
+  font-size: var(--header-font-size);
 }
 
 .reveal .header-logo {
@@ -21,31 +27,33 @@
   max-height: max(50px, 10vh);
 }
 
+.reveal .header-logo img {
+  margin: var(--header-margin);
+}
+
+
 .reveal .slides { margin-top: 3vh !important;}
 
 .inverse-header { color: #74ffba !important;}
 
-/*.reveal-header .sc-title {
-  padding-left: 1em;
-}
-
-.reveal-header .sb-title {
-  padding-right: 1em;
-}
-*/
 
 
-.reveal-header .sc-title,
-.reveal-header .sb-title {
-  color: #898E8B;
-  text-align: center;
-  /*margin: 8px 0px 0px 0px;*/
-  font-size: max(10px, 1.3vw);
+.reveal-header .sc-title p,
+.reveal-header .sb-title p {
+  filter: brightness(0.9);
 }
 
-.hide-sc-sb {
-  display: none;
+
+.reveal-header .sc-title p {
+  float: left;
+  margin-left: 2vw;
 }
+
+.reveal-header .sb-title p {
+  float: right;
+  margin-right: 1.2vw;
+}
+
 
 div.header-logo {
   grid-area: logo;
@@ -65,7 +73,16 @@ div.header-text {
 
 div.reveal-header {
   display: grid;
-  grid-template-columns: 0.4fr 0.4fr 2fr 0.4fr 0.15fr;
+  grid-template-columns: 0.4fr 0.4fr 2fr 0.4fr 0.2fr;
   grid-template-areas: 
     "logo sc ht sb . ";
+  column-gap: 10px;
+  align-items: center;
 }
+
+div.reveal-header.no-logo {
+  grid-template-columns: 0.7fr 2fr 0.7fr 0.1fr;
+  grid-template-areas: 
+    "sc ht sb . ";
+}
+
