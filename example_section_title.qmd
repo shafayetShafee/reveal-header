@@ -24,6 +24,10 @@ standalone: true
 - Turn off alarm
 - Get out of bed
 
+### TODO
+
+- Get freshed
+- Make the beds
 
 ## Subsection
 
@@ -32,15 +36,25 @@ standalone: true
 - Eat eggs
 - Drink coffee
 
-
-# Section 
-
-## Subsection 
-
 ### TODO
+
+- Walk a bit
+- More ...
+
+
+# Section {background="#43464B"}
+
+## Subsection {background="#43464B"}
+
+### TODO {background="#43464B"}
 
 - Turn off alarm
 - Get out of bed
+
+### TODO {background="#43464B"}
+
+- Get freshed
+- Make the beds
 
 
 ## Subsection {background="#43464B"}
@@ -50,3 +64,7 @@ standalone: true
 - Eat eggs
 - Drink coffee
 
+### TODO {background="#43464B"}
+
+- Walk a bit
+- More ...

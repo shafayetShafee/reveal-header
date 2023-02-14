@@ -8,8 +8,8 @@ A very simple Quarto filter extension for [`revealjs`](https://quarto.org/docs/p
 
 View the Demos of using this filter,
 
-- [live demo 01](https://shafayetshafee.github.io/reveal-header/example.html) 
-- [live demo 02](https://shafayetshafee.github.io/reveal-header/example_all.html) 
+- [`live demo 01`](https://shafayetshafee.github.io/reveal-header/example.html) 
+- [`live demo 02`](https://shafayetshafee.github.io/reveal-header/example_all.html) 
 
 ## Installing
 
