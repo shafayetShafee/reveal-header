@@ -12,7 +12,7 @@ function add_header() {
   }
 }
 
-window.onload = add_header();
+add_header();
 
 // Reveal API
 
@@ -22,21 +22,25 @@ const header_inner_html = header_text.innerHTML;
 
 // add the class inverse-header for slide with has-dark-background class
 // otherwise remove it.
-function add_class(has_dark, header_text) {
-  header_text.classList.remove('inverse-header');
-  if(has_dark) {
-    header_text.classList.add('inverse-header');
-  }
-}
+function add_class(has_dark, header_paras) {
+  header_paras.forEach(el => {
+    el.classList.remove('inverse-header');
+    if(has_dark) {
+      el.classList.add('inverse-header');
+    };
+  });
+};
+
+var header_paras = document.querySelectorAll("div.reveal-header p");
 
 if (Reveal.isReady()) {
   let dark = Reveal.getCurrentSlide().classList.contains('has-dark-background');
-  add_class(dark, header_text);
+  add_class(dark, header_paras);
 }
 
 Reveal.on( 'slidechanged', event => {
   let has_dark = event.currentSlide.classList.contains('has-dark-background');
-  add_class(has_dark, header_text);
+  add_class(has_dark, header_paras);
 });
 
 // make the visibility of header text defined in slide body none

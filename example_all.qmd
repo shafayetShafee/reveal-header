@@ -1,0 +1,57 @@
+---
+title: "Quarto Presentations"
+subtitle: "Create beautiful interactive slide decks with Reveal.js"
+author: Shafayet Khan Shafee
+date: last-modified
+format: 
+  revealjs:
+    slide-number: true
+    logo: images/quarto.png
+    sc-sb-title: true
+    header: Quarto Presentations with beautiful slide decks made by RevealJs
+    header-logo: images/reveal_logo.svg
+    title-as-header: true
+    footer: <https://quarto.org>
+filters: 
+  - reveal-header
+slide-level: 3
+number-sections: true
+engine: knitr
+standalone: true
+---
+
+# Section
+
+## Subsection
+
+### TODO
+
+- Turn off alarm
+- Get out of bed
+
+
+## Subsection
+
+### TODO
+
+- Eat eggs
+- Drink coffee
+
+
+# Section {background="#43464B"}
+
+## Subsection {background="#43464B"}
+
+### TODO {background="#43464B"}
+
+- Turn off alarm
+- Get out of bed
+
+
+## Subsection {background="#43464B"}
+
+### TODO {background="#43464B"}
+
+- Eat eggs
+- Drink coffee
+
