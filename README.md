@@ -115,6 +115,6 @@ Also, to change the header text style for slides with simple [`background`](http
 
 - The source code for a minimal example: [example.qmd](example.qmd) and the live demo of the rendered revealjs slides, [example.html](https://shafayetshafee.github.io/reveal-header/example.html)
 
-- The source code for another example that uses all the options: [example_all.qmd](example_all.qmd) and the live demo of the rendered revealjs slides, [example.html](https://shafayetshafee.github.io/reveal-header/example_all.html)
+- The source code for another example that uses all the options: [example_all.qmd](example_all.qmd) and the live demo of the rendered revealjs slides, [example_all.html](https://shafayetshafee.github.io/reveal-header/example_all.html)
 
-- The source code for another example that uses only `sc-sb-title`: [example_section-title.qmd](example_section-title.qmd) and the live demo of the rendered revealjs slides, [example.html](https://shafayetshafee.github.io/reveal-header/example_section-title.html)
+- The source code for another example that uses only `sc-sb-title`: [example_section-title.qmd](example_section-title.qmd) and the live demo of the rendered revealjs slides, [example_section_title.html](https://shafayetshafee.github.io/reveal-header/example_section_title.html)
