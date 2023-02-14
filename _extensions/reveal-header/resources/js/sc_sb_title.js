@@ -1,3 +1,11 @@
+/**
+ * reveal-header
+ * A filter that adds header text and logo.
+ * 
+ * MIT License
+ * Copyright (c) 2023 Shafayet Khan Shafee.
+ */
+
 if (document.querySelector('div.reveal-header img').getAttribute('src').length == 0) {
   document.querySelector('div.reveal-header').classList.add('no-logo')
 }

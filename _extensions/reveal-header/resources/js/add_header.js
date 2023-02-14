@@ -1,3 +1,11 @@
+/**
+ * reveal-header
+ * A filter that adds header text and logo.
+ * 
+ * MIT License
+ * Copyright (c) 2023 Shafayet Khan Shafee.
+ */
+
 function add_header() {
   let header = document.querySelector("div.reveal-header");
   let reveal = document.querySelector(".reveal");
