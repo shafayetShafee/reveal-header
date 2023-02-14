@@ -1,14 +1,19 @@
 # Reveal-header Extension For Quarto
 
-A very simple Quarto filter extension for [`revealjs`](https://quarto.org/docs/presentations/revealjs/) output format that provides support for adding header text like [`footer`](https://quarto.org/docs/presentations/revealjs/#footer-logo) on slides and also provides another YAML option to add a logo on top-left side of each slides. 
+A very simple Quarto filter extension for [`revealjs`](https://quarto.org/docs/presentations/revealjs/) output format that provides
 
-So by using this filter, it is possible to use two logos for each slides (One by using the default [`logo`](https://quarto.org/docs/presentations/revealjs/#footer-logo) option which adds the logo on bottom-right corner and another one by using `header-logo` option provided by this filter.)
+- Support for adding header text like [`footer`](https://quarto.org/docs/presentations/revealjs/#footer-logo) on slides, level1 (`h1`) and level2 (`h2`) slide titles on slide header,
 
-View the [live demo](https://shafayetshafee.github.io/reveal-header/example.html) of using this filter.
+- Another YAML option to add a logo on top-left side of each slides. So by using this filter, it is possible to use two logos for each slides (One by using the default [`logo`](https://quarto.org/docs/presentations/revealjs/#footer-logo) option which adds the logo on bottom-right corner and another one by using `header-logo` option provided by this filter.)
 
-**Note that, this extension requires Quarto version to be at least 1.2**
+View the Demos of using this filter,
+
+- [live demo 01](https://shafayetshafee.github.io/reveal-header/example.html) 
+- [live demo 02](https://shafayetshafee.github.io/reveal-header/example_all.html) 
 
 ## Installing
+
+:warning: **This extension requires Quarto version to be at least 1.2**
 
 ```bash
 quarto add shafayetShafee/reveal-header
@@ -19,7 +24,18 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-This filter provides two options `header` and `header-logo` for specifying the header text and logo image path that you want to appear on the top-left corner, respectively. So a minimal example is as follows, 
+This filter provides the following options,
+
+| Option               | Description                                                                                                                                                         |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `header`             | A simple header text to appear in the top part of the each slide. `header` can be overridden by `title-as-header` or `subtitle-as-header` or slide specific header. |
+| `header-logo`        | A path for logo image which will appear on the top-left corner of each slide.                                                                                       |
+| `sc-sb-title`        | `true` or `false`. Specifies whether level1 (`h1`) and level2 (`h2`) slide titles should appear in the slide header automatically when `slide-level` is 2 or 3.     |
+| `tilte-as-header`    | `true` or `false`. Specifies whether the Slide title should appear as the slide header automatically. Will override the `header` text.                              |
+| `subtitle-as-header` | `true` or `false`. Specifies whether the Slide subtitle should appear in the slide header automatically. Will ovverride the `title-as-header`.                      |
+
+
+Therefore an example could be,
 
 ```
 ---
@@ -61,6 +77,27 @@ Custom Header
 
 ```
 
+
+Another example that uses all of the options,
+
+```
+---
+format: 
+  revealjs:
+    slide-number: true
+    logo: images/quarto.png
+    sc-sb-title: true
+    header: Quarto Presentations with beautiful slide decks made by RevealJs
+    header-logo: images/reveal_logo.svg
+    subtitle-as-header: true
+    footer: <https://quarto.org>
+filters: 
+  - reveal-header
+slide-level: 3
+number-sections: true
+---
+```
+
 For a complete example with the live demo of the rendered output, see below.
 
 
@@ -76,5 +113,8 @@ Also, to change the header text style for slides with simple [`background`](http
 
 ## Example
 
-Here is the source code for a minimal example: [example.qmd](example.qmd) and the live demo of the rendered revealjs slides, [example.html](https://shafayetshafee.github.io/reveal-header/example.html)
+- The source code for a minimal example: [example.qmd](example.qmd) and the live demo of the rendered revealjs slides, [example.html](https://shafayetshafee.github.io/reveal-header/example.html)
 
+- The source code for another example that uses all the options: [example_all.qmd](example_all.qmd) and the live demo of the rendered revealjs slides, [example.html](https://shafayetshafee.github.io/reveal-header/example_all.html)
+
+- The source code for another example that uses only `sc-sb-title`: [example_section-title.qmd](example_section-title.qmd) and the live demo of the rendered revealjs slides, [example.html](https://shafayetshafee.github.io/reveal-header/example_section-title.html)
