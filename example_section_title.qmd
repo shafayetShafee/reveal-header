@@ -12,7 +12,7 @@ filters:
 slide-level: 3
 number-sections: true
 engine: knitr
-standalone: true
+embed-resources: true
 ---
 
 # Section
