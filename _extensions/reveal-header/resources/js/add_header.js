@@ -51,6 +51,12 @@ function header() {
   if (Reveal.isReady()) {
     
     add_header();
+    
+    if (document.querySelector('div.reveal.has-logo') != null) {
+      var slide_number = document.querySelector('div.slide-number');
+      var header = document.querySelector("div.reveal-header");
+      header.appendChild(slide_number);
+    };
   
     // Get the default header text element and innner HTML (i.e. literal text)
     var header_text = document.querySelector("div.header-text p");

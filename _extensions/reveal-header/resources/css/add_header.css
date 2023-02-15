@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap');
+
+
 :root {
   --header-font-size: max(10px, 1.4vw);
   --header-font-color: #898E8B;
   --header-margin: 0px 0px 0px 0px;
+  --header-font-family: 'Source Serif 4', serif;
 }
-
 
 .reveal .reveal-header {
   top: 0;
-  margin: 5px 0px 2px 0px;
+  margin: 3.2px 0px 2px 0px;
   width: 100%;
   position: fixed;
   z-index: 5;
+  font-family: var(--header-font-family);
 }
 
 .reveal .reveal-header p {
@@ -20,35 +24,43 @@
   font-size: var(--header-font-size);
 }
 
-
 .reveal-header .sc-title p,
 .reveal-header .sb-title p {
   font-size: max(10px, 1.45vw);
   filter: brightness(0.85);
 }
 
-
 .reveal-header .sc-title p { float: left;}
 .reveal-header .sb-title p { float: right;}
 .reveal-header.no-logo .sc-title p {margin-left: 2vw}
-
 
 div.header-logo { grid-area: logo;}
 div.sc-title { grid-area: sc;}
 div.sb-title { grid-area: sb;}
 div.header-text { grid-area: ht;}
+div.reveal.has-logo div.slide-number {
+  grid-area: sn;
+  top: unset !important;
+  right: unset !important;
+  bottom: unset !important;
+  padding: 5px 5px 5px 5px;
+  justify-self: center;
+  font-family: var(--header-font-family);
+  font-size: 18px;
+}
 
 div.reveal-header {
   display: grid;
-  grid-template-columns: 0.4fr 0.4fr 2fr 0.4fr 0.15fr;
-  grid-template-areas: "logo sc ht sb . ";
+  grid-template-columns: 0.4fr 0.4fr 2fr 0.4fr 0.3fr;
+  grid-template-areas: "logo sc ht sb sn";
   column-gap: 10px;
   align-items: center;
 }
 
 div.reveal-header.no-logo {
   grid-template-columns: 0.7fr 2fr 0.7fr 0.05fr;
-  grid-template-areas: "sc ht sb . ";
+  grid-template-areas: "sc ht sb sn";
+  margin-top: 1.5vh;
 }
 
 .reveal .header-logo {
@@ -61,9 +73,29 @@ div.reveal-header.no-logo {
 .reveal .header-logo img {
   margin: var(--header-margin);
   padding-left: 1vw;
+  padding-top: 5px;
 }
 
 
 .reveal .slides { margin-top: 3vh !important;}
-.reveal.has-logo .slide-number {top: 14px !important;}
 .inverse-header { color: #c5d7ce !important;}
+
+
+/* On screens that are 600px or less*/
+@media screen and (max-width: 600px) {
+  .reveal .header-logo img {
+    padding-top: 0px;
+    margin: 0px 0px 5px 0px;
+  }
+  
+  div.reveal-header {
+    grid-template-columns: 0.4fr 0.4fr 1fr 0.4fr 0.3fr;
+    grid-template-areas: "logo sc ht sb sn";
+  }
+
+  div.reveal-header.no-logo {
+    grid-template-columns: 0.7fr 1fr 0.7fr 0.05fr;
+    grid-template-areas: "sc ht sb sn";
+  }
+
+}
