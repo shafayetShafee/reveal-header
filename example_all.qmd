@@ -3,6 +3,7 @@ title: "Quarto Presentations"
 subtitle: "Create beautiful interactive slide decks with Reveal.js"
 author: Shafayet Khan Shafee
 date: last-modified
+date-format: "DD MMM, YYYY"
 format: 
   revealjs:
     slide-number: true
@@ -17,7 +18,6 @@ filters:
 slide-level: 3
 number-sections: true
 engine: knitr
-# standalone: true
 embed-resources: true
 ---
 
