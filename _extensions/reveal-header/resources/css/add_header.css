@@ -30,9 +30,9 @@
   filter: brightness(0.85);
 }
 
-.reveal-header .sc-title p { float: left;}
+.reveal-header .sc-title p { float: left; margin-left: 2vw}
 .reveal-header .sb-title p { float: right;}
-.reveal-header.no-logo .sc-title p {margin-left: 2vw}
+.reveal-header.no-logo .sc-title p {margin-left: 6vw}
 
 div.header-logo { grid-area: logo;}
 div.sc-title { grid-area: sc;}
@@ -63,17 +63,14 @@ div.reveal-header.no-logo {
   margin-top: 1.5vh;
 }
 
-.reveal .header-logo {
-  height: auto;
-  width: auto;
-  max-width: max(50px, 10vw);
-  max-height: max(50px, 10vh);
-}
-
 .reveal .header-logo img {
   margin: var(--header-margin);
   padding-left: 1vw;
   padding-top: 5px;
+  height: 100%;
+  width: auto;
+  max-width: max(60px, 10vw);
+  max-height: max(60px, 10vh);
 }
 
 
@@ -97,5 +94,7 @@ div.reveal-header.no-logo {
     grid-template-columns: 0.7fr 1fr 0.7fr 0.05fr;
     grid-template-areas: "sc ht sb sn";
   }
-
+  
+  .reveal-header .sc-title p { margin-left: 1vw}
+  div.reveal.has-logo div.slide-number { font-size: 10px; }
 }

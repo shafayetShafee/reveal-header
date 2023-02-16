@@ -46,7 +46,7 @@ Learn more: [Slide Backgrounds](https://quarto.org/docs/presentations/revealjs/#
 
 ::: header
 
-Slide with bg color #43464B, used in **.inverse-color**
+Slide with bg color #43464B, used in **.inverse-header**
 
 :::
 
