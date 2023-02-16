@@ -103,12 +103,14 @@ For a complete example with the live demo of the rendered output, see below.
 
 ## Styling
 
-Now to change the style of header text and header logo, you can use the following combination of css selectors,
+Now to change the style of header components (i.e. logo, section and subsection title, header text), you can use the following css selectors,
 
-- `.reveal .reveal-header p`, to change the styles of header text.
-- `.reveal .header-logo`, to change css properties of header image.
+- `.reveal-header .header-logo`: to change css properties of header image.
+- `.reveal-header .header-text`: to change the styles of header text.
+- `.reveal-header .sc-title`: to change the styles of section title on left side.
+- `.reveal-header .sb-title`: to change the styles of sub-section title on right side.
 
-Also, to change the header text style for slides with simple [`background`](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds) attributes, use the class `inverse-header`.
+Also, to change the header text style for slides with simple [`background`](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds) attributes, use the css selector`.reveal-header .inverse-header`.
 
 
 ## Example
