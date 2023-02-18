@@ -74,9 +74,13 @@ div.reveal-header.no-logo {
 }
 
 
-.reveal .slides { margin-top: 3vh !important;}
+/* .reveal .slides { margin-top: 3vh !important;} */
 .inverse-header { color: #c5d7ce !important;}
 
+
+div.slides section:not(.title-slide):not(#title-slide):not(.stack) {
+  padding-top: 1em;
+}
 
 /* On screens that are 600px or less*/
 @media screen and (max-width: 600px) {
