@@ -86,6 +86,26 @@ function header() {
       let dyn_header = event.currentSlide.querySelector('div.header p');
       change_header(dyn_header, header_text, header_inner_html);
     });
+    
+    /************** header text in title slide if title or                  ******/
+    /*************  subtitle is used as header text                         ******/
+    
+    
+    var title_text = document.querySelector('.reveal-header .title-text p');
+    
+    if (title_text != null) {
+      
+      title_text.style.display = 'none';
+      
+      Reveal.on( 'slidechanged' , event => {
+        if (event.currentSlide.matches('#title-slide')) {
+          title_text.style.display = 'none';
+        } else {
+          title_text.style.display = 'block';
+        }
+      });  
+    };
+    
   }; 
 };
 
