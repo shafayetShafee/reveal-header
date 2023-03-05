@@ -43,7 +43,7 @@ div.reveal.has-logo div.slide-number {
   top: unset !important;
   right: unset !important;
   bottom: unset !important;
-  padding: 5px 5px 5px 5px;
+  padding: 0px 5px 5px 5px;
   justify-self: center;
   /*font-family: var(--header-font-family);*/
   font-size: 18px;
