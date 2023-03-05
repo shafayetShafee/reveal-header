@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap');*/
 
 
 :root {
   --header-font-size: max(10px, 1.4vw);
   --header-font-color: #898E8B;
   --header-margin: 0px 0px 0px 0px;
-  --header-font-family: 'Source Serif 4', serif;
+  /*--header-font-family: 'Source Serif 4', serif;*/
 }
 
 .reveal .reveal-header {
@@ -14,7 +14,7 @@
   width: 100%;
   position: fixed;
   z-index: 5;
-  font-family: var(--header-font-family);
+  /*font-family: var(--header-font-family);*/
 }
 
 .reveal .reveal-header p {
@@ -45,7 +45,7 @@ div.reveal.has-logo div.slide-number {
   bottom: unset !important;
   padding: 5px 5px 5px 5px;
   justify-self: center;
-  font-family: var(--header-font-family);
+  /*font-family: var(--header-font-family);*/
   font-size: 18px;
 }
 
