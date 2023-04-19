@@ -26,14 +26,14 @@ If you're using version control, you will want to check in this directory.
 
 This filter provides the following options,
 
-| Option               | Description                                                                                                                                                         |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `header`             | A simple header text to appear in the top part of the each slide. `header` can be overridden by `title-as-header` or `subtitle-as-header` or slide specific header. |
-| `header-logo`        | A path for logo image which will appear on the top-left corner of each slide.                                                                                       |
-| `sc-sb-title`        | `true` or `false`. Specifies whether level1 (`h1`) and level2 (`h2`) slide titles should appear in the slide header automatically when `slide-level` is 2 or 3.     |
-| `tilte-as-header`    | `true` or `false`. Specifies whether the Slide title should appear as the slide header automatically. Will override the `header` text.                              |
-| `subtitle-as-header` | `true` or `false`. Specifies whether the Slide subtitle should appear in the slide header automatically. Will ovverride the `title-as-header`.                      |
-
+| Option                 | Description                                                                                                                                                                                                  |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `header`               | A simple header text to appear in the top part of the each slide. `header` can be overridden by `title-as-header` or `subtitle-as-header` or slide specific header.                                          |
+| `header-logo`          | A path for logo image which will appear on the top-left corner of each slide.                                                                                                                                |
+| `sc-sb-title`          | `true` or `false`. Specifies whether level1 (`h1`) and level2 (`h2`) slide titles should appear in the slide header automatically when `slide-level` is 2 or 3.                                              |
+| `tilte-as-header`      | `true` or `false`. Specifies whether the Slide title should appear as the slide header automatically. Will override the `header` text.                                                                       |
+| `subtitle-as-header`   | `true` or `false`. Specifies whether the Slide subtitle should appear in the slide header automatically. Will override the `title-as-header`.                                                                |
+| `hide-from-titleSlide` | Use `"text"` to remove the header text from title Slide, `"logo"` to remove the logo from top-left corner of header on the title Slide, `"all"` to remove both text and logo from the header on title Slide. |
 
 Therefore an example could be,
 
@@ -120,3 +120,5 @@ Also, to change the header text style for slides with simple [`background`](http
 - The source code for another example that uses all the options: [example_all.qmd](example_all.qmd) and the live demo of the rendered revealjs slides, [`example_all.html`](https://shafayetshafee.github.io/reveal-header/example_all.html)
 
 - The source code for another example that uses only `sc-sb-title`: [example_section-title.qmd](example_section-title.qmd) and the live demo of the rendered revealjs slides, [`example_section_title.html`](https://shafayetshafee.github.io/reveal-header/example_section_title.html)
+
+- The source code for example where header text is hidden on the title slide: [example_hide_header_text.qmd](example_hide_header_text.qmd) and the [`rendered output`](https://shafayetshafee.github.io/reveal-header/example_hide_header_text.html)
