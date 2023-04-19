@@ -11,7 +11,7 @@ format:
     footer: <https://quarto.org>
     header: Quarto Presentations with beautiful slide decks made by RevealJs
     header-logo: images/reveal_logo.svg
-    hide-from-titleSlide: "all"
+    hide-from-titleSlide: "text"
 filters:
   - reveal-header
 execute: 

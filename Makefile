@@ -4,4 +4,3 @@ clean:
 move:
 	mv *.html docs/
 
-all: clean move
