@@ -4,4 +4,4 @@ clean:
 move:
 	mv *.html docs/
 
-all: clean generate move
+all: clean move
