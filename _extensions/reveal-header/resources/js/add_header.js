@@ -47,6 +47,16 @@ function header() {
     };
   };
   
+  function hide_from_title_slide(element) {
+      Reveal.on( 'slidechanged' , event => {
+        if (event.currentSlide.matches('#title-slide')) {
+          element.style.visibility = 'hidden';
+        } else {
+          element.style.visibility = 'visible';
+        }
+      });
+    };
+  
   
   if (Reveal.isReady()) {
     
@@ -90,22 +100,13 @@ function header() {
     /************** header text in title slide if title or ***********************/
     /*************  subtitle is used as header text        ***********************/
     
-    function hide_from_title_slide(element) {
-      Reveal.on( 'slidechanged' , event => {
-        if (event.currentSlide.matches('#title-slide')) {
-          element.style.visibility = 'hidden';
-        } else {
-          element.style.visibility = 'visible';
-        }
-      });
-    };
-    
-    
     var title_text = document.querySelector('.reveal-header .title-text p');
     if (title_text != null) {
       title_text.style.visibility = 'hidden';
       hide_from_title_slide(title_text);
     };
+    
+    /*************** hide header text and logo on title slide ********************/
     
     var hide_header_text = document.querySelector('.header-text').getAttribute('data-hide-from-titleslide');
     var hide_header_logo = document.querySelector('.header-logo').getAttribute('data-hide-from-titleslide');
