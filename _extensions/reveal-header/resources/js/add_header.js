@@ -47,6 +47,16 @@ function header() {
     };
   };
   
+  function hide_from_title_slide(element) {
+      Reveal.on( 'slidechanged' , event => {
+        if (event.currentSlide.matches('#title-slide')) {
+          element.style.visibility = 'hidden';
+        } else {
+          element.style.visibility = 'visible';
+        }
+      });
+    };
+  
   
   if (Reveal.isReady()) {
     
@@ -87,24 +97,29 @@ function header() {
       change_header(dyn_header, header_text, header_inner_html);
     });
     
-    /************** header text in title slide if title or                  ******/
-    /*************  subtitle is used as header text                         ******/
-    
+    /************** header text in title slide if title or ***********************/
+    /*************  subtitle is used as header text        ***********************/
     
     var title_text = document.querySelector('.reveal-header .title-text p');
-    
     if (title_text != null) {
-      
-      title_text.style.display = 'none';
-      
-      Reveal.on( 'slidechanged' , event => {
-        if (event.currentSlide.matches('#title-slide')) {
-          title_text.style.display = 'none';
-        } else {
-          title_text.style.display = 'block';
-        }
-      });  
+      title_text.style.visibility = 'hidden';
+      hide_from_title_slide(title_text);
     };
+    
+    /*************** hide header text and logo on title slide ********************/
+    
+    var hide_header_text = document.querySelector('.header-text').getAttribute('data-hide-from-titleslide');
+    var hide_header_logo = document.querySelector('.header-logo').getAttribute('data-hide-from-titleslide');
+    
+    if (hide_header_text == 'true') {
+      header_text.style.visibility = 'hidden';
+      hide_from_title_slide(header_text);
+    }
+    
+    if (hide_header_logo == 'true') {
+      logo_img.style.visibility = 'hidden';
+      hide_from_title_slide(logo_img);
+    } 
     
   }; 
 };

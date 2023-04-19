@@ -72,6 +72,17 @@ if quarto.doc.is_format('revealjs') then
     local header_section = pandoc.Div(pandoc.Para(" "), {class = "sc-title"})
     local header_sbsection = pandoc.Div(pandoc.Para(" "), {class = "sb-title"})
     local header_para = pandoc.Div(pandoc.Para(header_text), header_para_class)
+    if meta['hide-from-titleSlide'] then
+      local hide = str(meta['hide-from-titleSlide'])
+      if hide == "text" then
+        header_para.attributes['hide-from-titleslide'] = "true"
+      elseif hide == "logo" then
+        header_img.attributes['hide-from-titleslide'] = "true"
+      elseif hide == "all" then
+        header_para.attributes['hide-from-titleslide'] = "true"
+        header_img.attributes['hide-from-titleslide'] = "true"
+      end
+    end
     local div = pandoc.Div(
       {
         header_img,
