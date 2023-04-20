@@ -8,6 +8,7 @@ format:
   revealjs:
     slide-number: true
     sc-sb-title: true
+    logo: images/quarto.png
 filters: 
   - reveal-header
 slide-level: 3
@@ -16,7 +17,7 @@ engine: knitr
 embed-resources: true
 ---
 
-# Section
+# Section 
 
 ## Subsection
 

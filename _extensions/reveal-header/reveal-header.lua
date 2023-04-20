@@ -25,23 +25,38 @@ SOFTWARE.
 
 local function ensureHtmlDeps()
   quarto.doc.add_html_dependency({
-  name = "reveal-header",
-  version = "1.0.0",
-  scripts = {
-    { path = "resources/js/add_header.js", attribs = {defer = "true"}}
-  },
-  stylesheets = {"resources/css/add_header.css"}
-})
+    name = "reveal-header",
+    version = "1.0.0",
+    scripts = {
+        { path = "resources/js/add_header.js", attribs = {defer = "true"}}
+      },
+    stylesheets = {"resources/css/add_header.css"}
+  })
 end
 
 local function sc_sb_title()
   quarto.doc.add_html_dependency({
-  name = "sc-sb-title",
+    name = "sc-sb-title",
+    version = "1.0.0",
+    scripts = {
+        { path = "resources/js/sc_sb_title.js", attribs = {defer = "true"}}
+      }
+  })
+end
+
+local function grid_htext()
+  quarto.doc.add_html_dependency({
+  name = "grid-htext",
   version = "1.0.0",
-  scripts = {
-    { path = "resources/js/sc_sb_title.js", attribs = {defer = "true"}}
-  },
-  stylesheets = {"resources/css/sc_sb_title.css"}
+  stylesheets = {"resources/css/grid_htext.css"}
+})
+end
+
+local function grid_no_htext()
+  quarto.doc.add_html_dependency({
+  name = "grid-no-htext",
+  version = "1.0.0",
+  stylesheets = {"resources/css/grid_no_htext.css"}
 })
 end
 
@@ -55,6 +70,11 @@ if quarto.doc.is_format('revealjs') then
     local meta = doc.meta
     if meta['sc-sb-title'] then
       sc_sb_title()
+    end
+    if meta['header'] then
+      grid_htext()
+    else
+      grid_no_htext()
     end
     local header_text = meta['header'] and str(meta['header']) or " "
     local header_para_class = {class = "header-text"}
