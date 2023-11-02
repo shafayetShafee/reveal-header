@@ -31,7 +31,7 @@ This filter provides the following options,
 | `header`               | A simple header text to appear in the top part of the each slide. `header` can be overridden by `title-as-header` or `subtitle-as-header` or slide specific header.                                          |
 | `header-logo`          | A path for logo image which will appear on the top-left corner of each slide.                                                                                                                                |
 | `sc-sb-title`          | `true` or `false`. Specifies whether level1 (`h1`) and level2 (`h2`) slide titles should appear in the slide header automatically when `slide-level` is 2 or 3.                                              |
-| `tilte-as-header`      | `true` or `false`. Specifies whether the Slide title should appear as the slide header automatically. Will override the `header` text.                                                                       |
+| `title-as-header`      | `true` or `false`. Specifies whether the Slide title should appear as the slide header automatically. Will override the `header` text.                                                                       |
 | `subtitle-as-header`   | `true` or `false`. Specifies whether the Slide subtitle should appear in the slide header automatically. Will override the `title-as-header`.                                                                |
 | `hide-from-titleSlide` | Use `"text"` to remove the header text from title Slide, `"logo"` to remove the logo from top-left corner of header on the title Slide, `"all"` to remove both text and logo from the header on title Slide. |
 
