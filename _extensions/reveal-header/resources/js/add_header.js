@@ -3,7 +3,7 @@
  * A filter that adds header text and logo.
  * 
  * MIT License
- * Copyright (c) 2023 Shafayet Khan Shafee.
+ * Copyright (c) 2023-2024 Shafayet Khan Shafee.
  */
 
 function header() {
@@ -21,6 +21,15 @@ function header() {
         logo_img.removeAttribute('data-src'); 
       };
     };
+  };
+  
+  function linkify_logo(logo, href) {
+    const logo_cloned = logo.cloneNode(true);
+    const link = document.createElement('a');
+    link.href = href;
+    link.target = '_blank';
+    link.appendChild(logo_cloned);
+    logo.replaceWith(link);
   };
     
   // add the class inverse-header for slide with has-dark-background class
@@ -55,12 +64,39 @@ function header() {
           element.style.visibility = 'visible';
         }
       });
-    };
+  };
+  
+  function get_clean_attrs(elem, attrName) {
+    let attrVal = elem.getAttribute(attrName);
+    if (attrVal != null) {
+     elem.removeAttribute(attrName); 
+    }
+    return attrVal;
+  };
   
   
   if (Reveal.isReady()) {
     
     add_header();
+    
+    /*************** linkifying the header and footer logo ********************/
+    const header_logo = document.querySelector('div.header-logo');
+    if (header_logo != null) {
+      const header_logo_link = get_clean_attrs(header_logo, 'data-header-logo-link');
+      const footer_logo_link = get_clean_attrs(header_logo, 'data-footer-logo-link');
+      
+      if (header_logo_link != null) {
+        const header_logo_img = document.querySelector('div.header-logo img');
+        linkify_logo(header_logo_img, header_logo_link);
+      };
+      
+      if (footer_logo_link != null) {
+        const footer_logo_img = document.querySelector('img.slide-logo');
+        footer_logo_img.setAttribute('style', "z-index:99;");
+        linkify_logo(footer_logo_img, footer_logo_link);
+      };
+    };
+    /****************************** END ***************************************/
     
     if (document.querySelector('div.reveal.has-logo') != null) {
       var slide_number = document.querySelector('div.slide-number');

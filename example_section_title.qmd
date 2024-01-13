@@ -9,6 +9,7 @@ format:
     slide-number: true
     sc-sb-title: true
     logo: images/quarto.png
+    footer-logo-link: "https://quarto.org"
 filters: 
   - reveal-header
 slide-level: 3

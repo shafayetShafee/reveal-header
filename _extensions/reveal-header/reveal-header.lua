@@ -88,7 +88,18 @@ if quarto.doc.is_format('revealjs') then
     end
     -- make divs structure for holding text and logo.
     local header_logo = meta['header-logo'] and str(meta['header-logo']) or ""
+    local header_logo_link = meta['header-logo-link'] and str(meta['header-logo-link']) or ""
+    local footer_logo_link = meta['footer-logo-link'] and str(meta['footer-logo-link']) or ""
     local header_img = pandoc.Div(pandoc.Image("", header_logo, ""), {class = "header-logo"})
+    
+    if header_logo_link ~= "" then
+      header_img.attributes['header-logo-link'] = header_logo_link
+    end
+    
+    if footer_logo_link ~= "" then
+      header_img.attributes['footer-logo-link'] = footer_logo_link
+    end
+    
     local header_section = pandoc.Div(pandoc.Para(" "), {class = "sc-title"})
     local header_sbsection = pandoc.Div(pandoc.Para(" "), {class = "sb-title"})
     local header_para = pandoc.Div(pandoc.Para(header_text), header_para_class)
