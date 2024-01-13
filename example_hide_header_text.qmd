@@ -8,9 +8,11 @@ format:
   revealjs:
     slide-number: true
     logo: images/quarto.png
+    footer-logo-link: "https://quarto.org"
     footer: <https://quarto.org>
     header: Quarto Presentations with beautiful slide decks made by RevealJs
     header-logo: images/reveal_logo.svg
+    header-logo-link: "https://revealjs.com"
     hide-from-titleSlide: "text"
 filters:
   - reveal-header

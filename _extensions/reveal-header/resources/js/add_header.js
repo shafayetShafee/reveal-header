@@ -79,6 +79,7 @@ function header() {
     
     add_header();
     
+    /*************** linkifying the header and footer logo ********************/
     const header_logo = document.querySelector('div.header-logo');
     if (header_logo != null) {
       const header_logo_link = get_clean_attrs(header_logo, 'data-header-logo-link');
@@ -95,6 +96,7 @@ function header() {
         linkify_logo(footer_logo_img, footer_logo_link);
       };
     };
+    /****************************** END ***************************************/
     
     if (document.querySelector('div.reveal.has-logo') != null) {
       var slide_number = document.querySelector('div.slide-number');
