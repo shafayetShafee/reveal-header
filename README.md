@@ -6,6 +6,8 @@ A very simple Quarto filter extension for [`revealjs`](https://quarto.org/docs/p
 
 - Another YAML option to add a logo on top-left side of each slides. So by using this filter, it is possible to use two logos for each slides (One by using the default [`logo`](https://quarto.org/docs/presentations/revealjs/#footer-logo) option which adds the logo on bottom-right corner and another one by using `header-logo` option provided by this filter.)
 
+- Provides YAML option `header-logo-link` and `footer-logo-link` to hyperlink the header logo and footer logo respectively.
+
 View the Demos of using this filter,
 
 - [`live demo 01`](https://shafayetshafee.github.io/reveal-header/example.html) 
@@ -26,13 +28,15 @@ If you're using version control, you will want to check in this directory.
 
 This filter provides the following options,
 
-| Option                 | Description                                                                                                                                                                                                  |
-|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `header`               | A simple header text to appear in the top part of the each slide. `header` can be overridden by `title-as-header` or `subtitle-as-header` or slide specific header.                                          |
-| `header-logo`          | A path for logo image which will appear on the top-left corner of each slide.                                                                                                                                |
-| `sc-sb-title`          | `true` or `false`. Specifies whether level1 (`h1`) and level2 (`h2`) slide titles should appear in the slide header automatically when `slide-level` is 2 or 3.                                              |
-| `title-as-header`      | `true` or `false`. Specifies whether the Slide title should appear as the slide header automatically. Will override the `header` text.                                                                       |
-| `subtitle-as-header`   | `true` or `false`. Specifies whether the Slide subtitle should appear in the slide header automatically. Will override the `title-as-header`.                                                                |
+| Option | Description |
+|---|---|
+| `header` | A simple header text to appear in the top part of the each slide. `header` can be overridden by `title-as-header` or `subtitle-as-header` or slide specific header. |
+| `header-logo` | A path for logo image which will appear on the top-left corner of each slide. |
+| `header-logo-link` | A link in quotes for the header logo. |
+| `footer-logo-link` | A link in quotes for the footer logo. |
+| `sc-sb-title` | `true` or `false`. Specifies whether level1 (`h1`) and level2 (`h2`) slide titles should appear in the slide header automatically when `slide-level` is 2 or 3. |
+| `title-as-header` | `true` or `false`. Specifies whether the Slide title should appear as the slide header automatically. Will override the `header` text. |
+| `subtitle-as-header` | `true` or `false`. Specifies whether the Slide subtitle should appear in the slide header automatically. Will override the `title-as-header`. |
 | `hide-from-titleSlide` | Use `"text"` to remove the header text from title Slide, `"logo"` to remove the logo from top-left corner of header on the title Slide, `"all"` to remove both text and logo from the header on title Slide. |
 
 Therefore an example could be,
