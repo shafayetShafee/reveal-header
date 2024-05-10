@@ -35,6 +35,7 @@
 .reveal-header.no-logo .sc-title p {margin-left: 6vw}
 
 
+.reveal .header-logo svg,
 .reveal .header-logo img {
   margin: var(--header-margin);
   padding-left: 1vw;
@@ -44,6 +45,8 @@
   max-width: max(60px, 10vw);
   max-height: max(60px, 10vh);
 }
+
+
 
 
 /* .reveal .slides { margin-top: 3vh !important;} */

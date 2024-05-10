@@ -15,10 +15,10 @@ function header() {
     reveal.insertBefore(header, reveal.firstChild);
     
     logo_img = document.querySelector('.header-logo img');
-    if (logo_img.getAttribute('src') == null) {
+    if (logo_img?.getAttribute('src') == null) {
       if (logo_img?.getAttribute('data-src') != null) {
         logo_img.src = logo_img?.getAttribute('data-src') || "";
-        logo_img.removeAttribute('data-src'); 
+        logo_img?.removeAttribute('data-src'); 
       };
     };
   };
@@ -86,12 +86,12 @@ function header() {
       const footer_logo_link = get_clean_attrs(header_logo, 'data-footer-logo-link');
       
       if (header_logo_link != null) {
-        const header_logo_img = document.querySelector('div.header-logo img');
+        const header_logo_img = document.querySelector('div.header-logo').firstElementChild;
         linkify_logo(header_logo_img, header_logo_link);
       };
       
       if (footer_logo_link != null) {
-        const footer_logo_img = document.querySelector('img.slide-logo');
+        const footer_logo_img = document.querySelector('.slide-logo');
         footer_logo_img.setAttribute('style', "z-index:99;");
         linkify_logo(footer_logo_img, footer_logo_link);
       };
