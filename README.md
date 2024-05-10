@@ -126,3 +126,8 @@ Also, to change the header text style for slides with simple [`background`](http
 - The source code for another example that uses only `sc-sb-title`: [example_section-title.qmd](example_section-title.qmd) and the live demo of the rendered revealjs slides, [`example_section_title.html`](https://shafayetshafee.github.io/reveal-header/example_section_title.html)
 
 - The source code for example where header text is hidden on the title slide: [example_hide_header_text.qmd](example_hide_header_text.qmd) and the [`rendered output`](https://shafayetshafee.github.io/reveal-header/example_hide_header_text.html)
+
+
+## Similar Extension
+
+If you find this extension useful, you may also like [`metropolis-beamer`](https://github.com/shafayetShafee/metropolis-beamer/tree/main) extension that provides a custom quarto revealjs format which aims to provide a lookalike [`metropolis beamer theme`] for quarto revealjs.

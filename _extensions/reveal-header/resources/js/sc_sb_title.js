@@ -39,7 +39,7 @@
   
   if (Reveal.isReady()) {
   
-    if (document.querySelector('div.reveal-header img').getAttribute('src').length == 0) {
+    if (document.querySelector('div.reveal-header img')?.getAttribute('src')?.length == 0) {
       document.querySelector('div.reveal-header').classList.add('no-logo')
     }
   
