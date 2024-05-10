@@ -130,4 +130,4 @@ Also, to change the header text style for slides with simple [`background`](http
 
 ## Similar Extension
 
-If you find this extension useful, you may also like [`metropolis-beamer`](https://github.com/shafayetShafee/metropolis-beamer/tree/main) extension that provides a custom quarto revealjs format which aims to provide a lookalike [`metropolis beamer theme`] for quarto revealjs.
+If you find this extension useful, you may also like [`metropolis-beamer`](https://github.com/shafayetShafee/metropolis-beamer/tree/main) extension that provides a custom quarto revealjs format which aims to provide a lookalike [`metropolis beamer theme`](https://www.overleaf.com/latex/templates/metropolis-beamer-theme/qzyvdhrntfmr) for quarto revealjs.
